@@ -1,0 +1,107 @@
+{
+  "name": "@hey-research-lab/embed",
+  "version": "0.1.0",
+  "description": "Dependency-free <hey-project> Web Component and URL builder for embedding HEY's builder evidence widgets, served by heyresearch.xyz.",
+  "license": "MIT",
+  "author": "HEY Research Lab",
+  "type": "module",
+  "homepage": "https://heyresearch.xyz/developers",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hey-research-lab/hey-embed.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hey-research-lab/hey-embed/issues"
+  },
+  "keywords": [
+    "hey-research",
+    "robinhood-chain",
+    "web-components",
+    "custom-element",
+    "embed",
+    "widget",
+    "iframe",
+    "react",
+    "developer-tools"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "sideEffects": [
+    "./dist/index.js",
+    "./dist/index.cjs",
+    "./dist/hey-embed.iife.js"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "unpkg": "./dist/hey-embed.iife.js",
+  "jsdelivr": "./dist/hey-embed.iife.js",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./react": {
+      "import": {
+        "types": "./dist/react.d.ts",
+        "default": "./dist/react.js"
+      },
+      "require": {
+        "types": "./dist/react.d.cts",
+        "default": "./dist/react.cjs"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "packageManager": "pnpm@9.15.1",
+  "scripts": {
+    "build": "node -e \"require('node:fs').rmSync('dist',{recursive:true,force:true})\" && tsup && node scripts/check-bundle.mjs",
+    "lint": "eslint .",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "scan": "node scripts/scan.mjs .",
+    "format:check": "prettier --check .",
+    "format": "prettier --write .",
+    "parity:refresh": "node scripts/refresh-parity.mjs",
+    "test:live": "HEY_LIVE=1 vitest run test/live.test.ts"
+  },
+  "peerDependencies": {
+    "react": ">=17.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "@types/node": "^22.10.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "eslint": "^9.17.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.4.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.0",
+    "vitest": "^2.1.8"
+  }
+}

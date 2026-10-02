@@ -1,0 +1,6 @@
+dist
+coverage
+node_modules
+pnpm-lock.yaml
+test/fixtures/production
+scripts/scan.mjs
