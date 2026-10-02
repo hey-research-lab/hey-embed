@@ -4,6 +4,11 @@ All notable changes to this project are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and the project uses
 [Semantic Versioning](https://semver.org/).
 
+## 0.1.1 — 2026-10-02
+
+- React wrapper: a widget given a valid `contract` falls back (no scripts) to that token's page on HEY, `/token/4663/<address>`, instead of the homepage.
+- Issue templates (bug, idea) with private security reporting and HEY corrections linked.
+
 ## 0.1.0 — 2026-10-02
 
 Initial release.

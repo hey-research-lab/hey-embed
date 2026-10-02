@@ -21,7 +21,7 @@ import {
   type EmbedVariant,
 } from './contract';
 import { defineHeyProject } from './element';
-import { EMBED_SLUG_RE } from './ref';
+import { readEmbedRef } from './ref';
 import { projectPageUrl } from './url';
 
 export interface HeyProjectProps {
@@ -63,16 +63,39 @@ export function HeyProject(props: HeyProjectProps): ReactElement {
   return createElement(
     EMBED_ELEMENT_NAME,
     attributes,
-    props.children ?? fallbackLink(project, props.label),
+    props.children ?? fallbackLink(props.contract, project, props.label),
   );
 }
 
-function fallbackLink(project: string | undefined, label: string | undefined): ReactElement {
-  const slug = project?.trim().toLowerCase();
-  const valid = slug !== undefined && EMBED_SLUG_RE.test(slug);
-  const href = valid ? projectPageUrl(slug) : HEY_ORIGIN;
-  const text = label ?? (valid ? `${slug} on HEY Research Lab` : EMBED_DEFAULT_TITLE);
-  return createElement('a', { href }, text);
+/**
+ * The server-rendered link readers without scripts get: the contract's page on HEY when a valid
+ * contract is given (it wins, as on the element; 0.1.1), else the project's page, else HEY.
+ */
+function fallbackLink(
+  contract: string | undefined,
+  project: string | undefined,
+  label: string | undefined,
+): ReactElement {
+  const fromContract = contract === undefined ? undefined : readEmbedRef(contract);
+  const read = fromContract?.ok
+    ? fromContract
+    : project === undefined
+      ? undefined
+      : readEmbedRef(project);
+  if (read?.ok && read.ref.kind === 'contract') {
+    const { chainId, address } = read.ref;
+    const text = label ?? `${address.slice(0, 6)}…${address.slice(-4)} on HEY Research Lab`;
+    return createElement('a', { href: `${HEY_ORIGIN}/token/${chainId}/${address}` }, text);
+  }
+  if (read?.ok && read.ref.kind === 'slug') {
+    const slug = read.ref.slug;
+    return createElement(
+      'a',
+      { href: projectPageUrl(slug) },
+      label ?? `${slug} on HEY Research Lab`,
+    );
+  }
+  return createElement('a', { href: HEY_ORIGIN }, label ?? EMBED_DEFAULT_TITLE);
 }
 
 export type { EmbedTheme, EmbedVariant } from './contract';

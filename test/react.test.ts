@@ -40,6 +40,15 @@ describe('@hey-research-lab/embed/react', () => {
     );
   });
 
+  it('links a contract widget’s fallback to that token on HEY, never the homepage (0.1.1)', () => {
+    const html = renderToStaticMarkup(
+      createElement(HeyProject, { contract: '4663:0x1234567890ABCDEF1234567890abcdef12345678' }),
+    );
+    expect(html).toContain(
+      '<a href="https://heyresearch.xyz/token/4663/0x1234567890abcdef1234567890abcdef12345678">0x1234…5678 on HEY Research Lab</a>',
+    );
+  });
+
   it('links the fallback to heyresearch.xyz when the slug is not valid, and escapes text', () => {
     const html = renderToStaticMarkup(createElement(HeyProject, { project: '"><img src=x>' }));
     expect(html).toContain(
