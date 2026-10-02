@@ -4,6 +4,11 @@ All notable changes to this project are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and the project uses
 [Semantic Versioning](https://semver.org/).
 
+## 0.1.2 — 2026-10-03
+
+- The compact widget is first drawn 120 px tall, as production now draws it (it reports about 119 px; 92 made the host page shift when it loaded).
+- `pnpm parity:refresh` reads what the origin serves now, never a cached CDN copy.
+
 ## 0.1.1 — 2026-10-02
 
 - React wrapper: a widget given a valid `contract` falls back (no scripts) to that token's page on HEY, `/token/4663/<address>`, instead of the homepage.

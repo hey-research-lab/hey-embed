@@ -1,6 +1,6 @@
 {
   "name": "@hey-research-lab/embed",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Dependency-free <hey-project> Web Component and URL builder for embedding HEY's builder evidence widgets, served by heyresearch.xyz.",
   "license": "MIT",
   "author": "HEY Research Lab",

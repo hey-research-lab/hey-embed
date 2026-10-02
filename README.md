@@ -68,7 +68,7 @@ run. More: [`examples/plain-html`](examples/plain-html/index.html),
 
 | Variant   | Shows                                                                                   | First height |
 | --------- | --------------------------------------------------------------------------------------- | -----------: |
-| `compact` | name, activity status and the latest ship, in one line                                  |         92px |
+| `compact` | name, activity status and the latest ship, in one line                                  |        120px |
 | `builder` | status, latest ship, meaningful ships in 30 days and whether HEY verified the builder   |        196px |
 | `changes` | the newest changes HEY recorded for the project, with how many there are in all         |        280px |
 | `full`    | the research summary line, the builder facts and the latest change                      |        340px |

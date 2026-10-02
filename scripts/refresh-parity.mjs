@@ -16,7 +16,9 @@ const DIR = new URL('../test/fixtures/production/', import.meta.url);
 
 let changed = 0;
 for (const [name, url] of Object.entries(FILES)) {
-  const response = await fetch(url, { redirect: 'error', signal: AbortSignal.timeout(10_000) });
+  // A query the CDN has never seen, so the refresh reads what the origin serves now, not a cached copy.
+  const fresh = `${url}?parity=${Date.now()}`;
+  const response = await fetch(fresh, { redirect: 'error', signal: AbortSignal.timeout(10_000) });
   if (response.status !== 200) throw new Error(`${url} answered ${response.status}`);
   const type = response.headers.get('content-type') ?? '';
   if (!type.startsWith('text/javascript')) throw new Error(`${url} is ${type}, not JavaScript`);

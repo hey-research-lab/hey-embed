@@ -69,7 +69,7 @@ export const EMBED_VARIANT_LABELS: Readonly<Record<EmbedVariant, { label: string
  * Close to the real height at 320px wide so the host page does not jump.
  */
 export const EMBED_INITIAL_HEIGHT: Readonly<Record<EmbedVariant, number>> = {
-  compact: 92,
+  compact: 120,
   builder: 196,
   changes: 280,
   full: 340,

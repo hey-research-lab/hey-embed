@@ -9,7 +9,7 @@
   var THEMES = ["light","dark","auto"];
   var DEFAULT_VARIANT = "builder";
   var DEFAULT_THEME = "auto";
-  var HEIGHTS = {"compact":92,"builder":196,"changes":280,"full":340,"signal":176};
+  var HEIGHTS = {"compact":120,"builder":196,"changes":280,"full":340,"signal":176};
   var MIN = 60, MAX = 1200;
   var MESSAGE = "hey-embed:height";
   if (typeof window === 'undefined' || !window.customElements || window.customElements.get('hey-project')) return;
