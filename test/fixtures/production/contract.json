@@ -1,0 +1,79 @@
+{
+  "source": "HEY Research Lab production embed contract at 21775391f6c0fb4494575e0b4463df535c65cb96",
+  "origin": "https://heyresearch.xyz",
+  "variants": [
+    "compact",
+    "builder",
+    "changes",
+    "full",
+    "signal"
+  ],
+  "themes": [
+    "light",
+    "dark",
+    "auto"
+  ],
+  "defaultVariant": "builder",
+  "defaultTheme": "auto",
+  "variantLabels": {
+    "compact": {
+      "label": "Compact",
+      "help": "Name, activity status and the latest ship, in one line."
+    },
+    "builder": {
+      "label": "Builder",
+      "help": "Status, latest ship, meaningful ships in 30 days and whether HEY verified the builder."
+    },
+    "changes": {
+      "label": "Latest changes",
+      "help": "The newest changes HEY recorded for the project, with how many there are in all."
+    },
+    "full": {
+      "label": "Intelligence card",
+      "help": "The research summary line, the builder facts and the latest change."
+    },
+    "signal": {
+      "label": "Signal",
+      "help": "The newest HEY Signal about building or contracts. Market signals are never shown here."
+    }
+  },
+  "initialHeights": {
+    "compact": 92,
+    "builder": 196,
+    "changes": 280,
+    "full": 340,
+    "signal": 176
+  },
+  "heightRange": {
+    "min": 60,
+    "max": 1200
+  },
+  "heightMessage": "hey-embed:height",
+  "utmSource": "embed",
+  "elementName": "hey-project",
+  "elementAttributes": [
+    "project",
+    "contract",
+    "variant",
+    "theme",
+    "label"
+  ],
+  "sandbox": "allow-scripts allow-popups allow-popups-to-escape-sandbox",
+  "defaultFrameTitle": "Project intelligence from HEY Research Lab",
+  "scriptPath": "/embed/hey-project.js",
+  "frameScriptPath": "/embed/frame.js",
+  "framePath": "/embed/project/{ref}",
+  "frameQuery": [
+    "variant",
+    "theme"
+  ],
+  "frameContentSecurityPolicy": "default-src 'none'; script-src 'self'; style-src '<sha256 of the one stylesheet>'; img-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors *",
+  "scriptHeaders": {
+    "content-type": "text/javascript; charset=utf-8",
+    "cache-control": "public, max-age=3600, s-maxage=86400, stale-while-revalidate=86400",
+    "access-control-allow-origin": "*",
+    "cross-origin-resource-policy": "cross-origin",
+    "x-content-type-options": "nosniff",
+    "content-security-policy": "default-src 'none'"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "variants": [
+    {
+      "input": "compact",
+      "parsed": "compact"
+    },
+    {
+      "input": "BUILDER",
+      "parsed": "builder"
+    },
+    {
+      "input": " full ",
+      "parsed": "full"
+    },
+    {
+      "input": "signal",
+      "parsed": "signal"
+    },
+    {
+      "input": "changes",
+      "parsed": "changes"
+    },
+    {
+      "input": "nope",
+      "parsed": "builder"
+    },
+    {
+      "input": "",
+      "parsed": "builder"
+    },
+    {
+      "input": null,
+      "parsed": "builder"
+    }
+  ],
+  "themes": [
+    {
+      "input": "light",
+      "parsed": "light"
+    },
+    {
+      "input": "DARK",
+      "parsed": "dark"
+    },
+    {
+      "input": " auto ",
+      "parsed": "auto"
+    },
+    {
+      "input": "sepia",
+      "parsed": "auto"
+    },
+    {
+      "input": "",
+      "parsed": "auto"
+    },
+    {
+      "input": null,
+      "parsed": "auto"
+    }
+  ]
+}

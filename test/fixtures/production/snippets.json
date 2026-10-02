@@ -1,0 +1,63 @@
+[
+  {
+    "target": {
+      "ref": "agentos",
+      "slug": "agentos",
+      "name": "AgentOS",
+      "variant": "builder",
+      "theme": "auto"
+    },
+    "frameUrl": "https://heyresearch.xyz/embed/project/agentos?variant=builder&theme=auto",
+    "html": "<script src=\"https://heyresearch.xyz/embed/hey-project.js\" async></script>\n<hey-project project=\"agentos\" variant=\"builder\" theme=\"auto\">\n  <a href=\"https://heyresearch.xyz/project/agentos\">AgentOS on HEY Research Lab</a>\n</hey-project>",
+    "iframe": "<iframe src=\"https://heyresearch.xyz/embed/project/agentos?variant=builder&amp;theme=auto\" title=\"AgentOS on HEY Research Lab\" width=\"100%\" height=\"196\" loading=\"lazy\" sandbox=\"allow-scripts allow-popups allow-popups-to-escape-sandbox\" style=\"border:0;display:block;max-width:100%\"></iframe>",
+    "react": "import { useEffect, useRef, useState } from 'react';\n\n// HEY Research Lab project intelligence, from https://heyresearch.xyz/developers/embeds\nexport function HeyProject() {\n  const frame = useRef(null);\n  const [height, setHeight] = useState(196);\n\n  useEffect(() => {\n    const onMessage = (event) => {\n      if (!frame.current || event.source !== frame.current.contentWindow) return;\n      const data = event.data;\n      if (data && data.type === 'hey-embed:height' && typeof data.height === 'number') {\n        setHeight(Math.min(Math.max(Math.ceil(data.height), 60), 1200));\n      }\n    };\n    window.addEventListener('message', onMessage);\n    return () => window.removeEventListener('message', onMessage);\n  }, []);\n\n  return (\n    <iframe\n      ref={frame}\n      src={\"https://heyresearch.xyz/embed/project/agentos?variant=builder&theme=auto\"}\n      title={\"AgentOS on HEY Research Lab\"}\n      height={height}\n      loading=\"lazy\"\n      sandbox=\"allow-scripts allow-popups allow-popups-to-escape-sandbox\"\n      style={{ border: 0, width: '100%', display: 'block' }}\n    />\n  );\n}\n"
+  },
+  {
+    "target": {
+      "ref": "4663:0x1234567890abcdef1234567890abcdef12345678",
+      "name": "Token Project",
+      "variant": "compact",
+      "theme": "dark"
+    },
+    "frameUrl": "https://heyresearch.xyz/embed/project/4663:0x1234567890abcdef1234567890abcdef12345678?variant=compact&theme=dark",
+    "html": "<script src=\"https://heyresearch.xyz/embed/hey-project.js\" async></script>\n<hey-project contract=\"4663:0x1234567890abcdef1234567890abcdef12345678\" variant=\"compact\" theme=\"dark\">\n  <a href=\"https://heyresearch.xyz\">Token Project on HEY Research Lab</a>\n</hey-project>",
+    "iframe": "<iframe src=\"https://heyresearch.xyz/embed/project/4663:0x1234567890abcdef1234567890abcdef12345678?variant=compact&amp;theme=dark\" title=\"Token Project on HEY Research Lab\" width=\"100%\" height=\"92\" loading=\"lazy\" sandbox=\"allow-scripts allow-popups allow-popups-to-escape-sandbox\" style=\"border:0;display:block;max-width:100%\"></iframe>",
+    "react": "import { useEffect, useRef, useState } from 'react';\n\n// HEY Research Lab project intelligence, from https://heyresearch.xyz/developers/embeds\nexport function HeyProject() {\n  const frame = useRef(null);\n  const [height, setHeight] = useState(92);\n\n  useEffect(() => {\n    const onMessage = (event) => {\n      if (!frame.current || event.source !== frame.current.contentWindow) return;\n      const data = event.data;\n      if (data && data.type === 'hey-embed:height' && typeof data.height === 'number') {\n        setHeight(Math.min(Math.max(Math.ceil(data.height), 60), 1200));\n      }\n    };\n    window.addEventListener('message', onMessage);\n    return () => window.removeEventListener('message', onMessage);\n  }, []);\n\n  return (\n    <iframe\n      ref={frame}\n      src={\"https://heyresearch.xyz/embed/project/4663:0x1234567890abcdef1234567890abcdef12345678?variant=compact&theme=dark\"}\n      title={\"Token Project on HEY Research Lab\"}\n      height={height}\n      loading=\"lazy\"\n      sandbox=\"allow-scripts allow-popups allow-popups-to-escape-sandbox\"\n      style={{ border: 0, width: '100%', display: 'block' }}\n    />\n  );\n}\n"
+  },
+  {
+    "target": {
+      "ref": "0x1234567890abcdef1234567890abcdef12345678",
+      "variant": "changes",
+      "theme": "light"
+    },
+    "frameUrl": "https://heyresearch.xyz/embed/project/0x1234567890abcdef1234567890abcdef12345678?variant=changes&theme=light",
+    "html": "<script src=\"https://heyresearch.xyz/embed/hey-project.js\" async></script>\n<hey-project contract=\"0x1234567890abcdef1234567890abcdef12345678\" variant=\"changes\" theme=\"light\">\n  <a href=\"https://heyresearch.xyz\">Project intelligence from HEY Research Lab</a>\n</hey-project>",
+    "iframe": "<iframe src=\"https://heyresearch.xyz/embed/project/0x1234567890abcdef1234567890abcdef12345678?variant=changes&amp;theme=light\" title=\"Project intelligence from HEY Research Lab\" width=\"100%\" height=\"280\" loading=\"lazy\" sandbox=\"allow-scripts allow-popups allow-popups-to-escape-sandbox\" style=\"border:0;display:block;max-width:100%\"></iframe>",
+    "react": "import { useEffect, useRef, useState } from 'react';\n\n// HEY Research Lab project intelligence, from https://heyresearch.xyz/developers/embeds\nexport function HeyProject() {\n  const frame = useRef(null);\n  const [height, setHeight] = useState(280);\n\n  useEffect(() => {\n    const onMessage = (event) => {\n      if (!frame.current || event.source !== frame.current.contentWindow) return;\n      const data = event.data;\n      if (data && data.type === 'hey-embed:height' && typeof data.height === 'number') {\n        setHeight(Math.min(Math.max(Math.ceil(data.height), 60), 1200));\n      }\n    };\n    window.addEventListener('message', onMessage);\n    return () => window.removeEventListener('message', onMessage);\n  }, []);\n\n  return (\n    <iframe\n      ref={frame}\n      src={\"https://heyresearch.xyz/embed/project/0x1234567890abcdef1234567890abcdef12345678?variant=changes&theme=light\"}\n      title={\"Project intelligence from HEY Research Lab\"}\n      height={height}\n      loading=\"lazy\"\n      sandbox=\"allow-scripts allow-popups allow-popups-to-escape-sandbox\"\n      style={{ border: 0, width: '100%', display: 'block' }}\n    />\n  );\n}\n"
+  },
+  {
+    "target": {
+      "ref": "hoodlock",
+      "slug": "hoodlock",
+      "name": "\"><script>alert(1)</script> & co",
+      "variant": "full",
+      "theme": "light"
+    },
+    "frameUrl": "https://heyresearch.xyz/embed/project/hoodlock?variant=full&theme=light",
+    "html": "<script src=\"https://heyresearch.xyz/embed/hey-project.js\" async></script>\n<hey-project project=\"hoodlock\" variant=\"full\" theme=\"light\">\n  <a href=\"https://heyresearch.xyz/project/hoodlock\">&quot;>&lt;script>alert(1)&lt;/script> &amp; co on HEY Research Lab</a>\n</hey-project>",
+    "iframe": "<iframe src=\"https://heyresearch.xyz/embed/project/hoodlock?variant=full&amp;theme=light\" title=\"&quot;>&lt;script>alert(1)&lt;/script> &amp; co on HEY Research Lab\" width=\"100%\" height=\"340\" loading=\"lazy\" sandbox=\"allow-scripts allow-popups allow-popups-to-escape-sandbox\" style=\"border:0;display:block;max-width:100%\"></iframe>",
+    "react": "import { useEffect, useRef, useState } from 'react';\n\n// HEY Research Lab project intelligence, from https://heyresearch.xyz/developers/embeds\nexport function HeyProject() {\n  const frame = useRef(null);\n  const [height, setHeight] = useState(340);\n\n  useEffect(() => {\n    const onMessage = (event) => {\n      if (!frame.current || event.source !== frame.current.contentWindow) return;\n      const data = event.data;\n      if (data && data.type === 'hey-embed:height' && typeof data.height === 'number') {\n        setHeight(Math.min(Math.max(Math.ceil(data.height), 60), 1200));\n      }\n    };\n    window.addEventListener('message', onMessage);\n    return () => window.removeEventListener('message', onMessage);\n  }, []);\n\n  return (\n    <iframe\n      ref={frame}\n      src={\"https://heyresearch.xyz/embed/project/hoodlock?variant=full&theme=light\"}\n      title={\"\\\"><script>alert(1)</script> & co on HEY Research Lab\"}\n      height={height}\n      loading=\"lazy\"\n      sandbox=\"allow-scripts allow-popups allow-popups-to-escape-sandbox\"\n      style={{ border: 0, width: '100%', display: 'block' }}\n    />\n  );\n}\n"
+  },
+  {
+    "target": {
+      "ref": "hoodlock",
+      "slug": "hoodlock",
+      "variant": "signal",
+      "theme": "auto"
+    },
+    "frameUrl": "https://heyresearch.xyz/embed/project/hoodlock?variant=signal&theme=auto",
+    "html": "<script src=\"https://heyresearch.xyz/embed/hey-project.js\" async></script>\n<hey-project project=\"hoodlock\" variant=\"signal\" theme=\"auto\">\n  <a href=\"https://heyresearch.xyz/project/hoodlock\">Project intelligence from HEY Research Lab</a>\n</hey-project>",
+    "iframe": "<iframe src=\"https://heyresearch.xyz/embed/project/hoodlock?variant=signal&amp;theme=auto\" title=\"Project intelligence from HEY Research Lab\" width=\"100%\" height=\"176\" loading=\"lazy\" sandbox=\"allow-scripts allow-popups allow-popups-to-escape-sandbox\" style=\"border:0;display:block;max-width:100%\"></iframe>",
+    "react": "import { useEffect, useRef, useState } from 'react';\n\n// HEY Research Lab project intelligence, from https://heyresearch.xyz/developers/embeds\nexport function HeyProject() {\n  const frame = useRef(null);\n  const [height, setHeight] = useState(176);\n\n  useEffect(() => {\n    const onMessage = (event) => {\n      if (!frame.current || event.source !== frame.current.contentWindow) return;\n      const data = event.data;\n      if (data && data.type === 'hey-embed:height' && typeof data.height === 'number') {\n        setHeight(Math.min(Math.max(Math.ceil(data.height), 60), 1200));\n      }\n    };\n    window.addEventListener('message', onMessage);\n    return () => window.removeEventListener('message', onMessage);\n  }, []);\n\n  return (\n    <iframe\n      ref={frame}\n      src={\"https://heyresearch.xyz/embed/project/hoodlock?variant=signal&theme=auto\"}\n      title={\"Project intelligence from HEY Research Lab\"}\n      height={height}\n      loading=\"lazy\"\n      sandbox=\"allow-scripts allow-popups allow-popups-to-escape-sandbox\"\n      style={{ border: 0, width: '100%', display: 'block' }}\n    />\n  );\n}\n"
+  }
+]

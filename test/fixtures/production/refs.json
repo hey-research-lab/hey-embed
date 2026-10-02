@@ -1,0 +1,140 @@
+[
+  {
+    "input": "agentos",
+    "parsed": {
+      "kind": "slug",
+      "slug": "agentos"
+    }
+  },
+  {
+    "input": "AgentOS",
+    "parsed": {
+      "kind": "slug",
+      "slug": "agentos"
+    }
+  },
+  {
+    "input": " agentos ",
+    "parsed": {
+      "kind": "slug",
+      "slug": "agentos"
+    }
+  },
+  {
+    "input": "a",
+    "parsed": {
+      "kind": "slug",
+      "slug": "a"
+    }
+  },
+  {
+    "input": "a-b",
+    "parsed": {
+      "kind": "slug",
+      "slug": "a-b"
+    }
+  },
+  {
+    "input": "a-",
+    "parsed": null
+  },
+  {
+    "input": "-a",
+    "parsed": null
+  },
+  {
+    "input": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "parsed": {
+      "kind": "slug",
+      "slug": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    }
+  },
+  {
+    "input": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "parsed": null
+  },
+  {
+    "input": "agent_os",
+    "parsed": null
+  },
+  {
+    "input": "../admin",
+    "parsed": null
+  },
+  {
+    "input": "",
+    "parsed": null
+  },
+  {
+    "input": "0x1234567890abcdef1234567890abcdef12345678",
+    "parsed": {
+      "kind": "contract",
+      "chainId": 4663,
+      "address": "0x1234567890abcdef1234567890abcdef12345678"
+    }
+  },
+  {
+    "input": "0x1234567890ABCDEF1234567890ABCDEF12345678",
+    "parsed": {
+      "kind": "contract",
+      "chainId": 4663,
+      "address": "0x1234567890abcdef1234567890abcdef12345678"
+    }
+  },
+  {
+    "input": "4663:0x1234567890abcdef1234567890abcdef12345678",
+    "parsed": {
+      "kind": "contract",
+      "chainId": 4663,
+      "address": "0x1234567890abcdef1234567890abcdef12345678"
+    }
+  },
+  {
+    "input": "1:0x1234567890abcdef1234567890abcdef12345678",
+    "parsed": {
+      "kind": "contract",
+      "chainId": 1,
+      "address": "0x1234567890abcdef1234567890abcdef12345678"
+    }
+  },
+  {
+    "input": "04663:0x1234567890abcdef1234567890abcdef12345678",
+    "parsed": {
+      "kind": "contract",
+      "chainId": 4663,
+      "address": "0x1234567890abcdef1234567890abcdef12345678"
+    }
+  },
+  {
+    "input": "0:0x1234567890abcdef1234567890abcdef12345678",
+    "parsed": null
+  },
+  {
+    "input": "0x1234",
+    "parsed": null
+  },
+  {
+    "input": "eip155:4663:0x1234567890abcdef1234567890abcdef12345678",
+    "parsed": null
+  },
+  {
+    "input": "4663%3A0x1234567890abcdef1234567890abcdef12345678",
+    "parsed": {
+      "kind": "contract",
+      "chainId": 4663,
+      "address": "0x1234567890abcdef1234567890abcdef12345678"
+    }
+  },
+  {
+    "input": "%E0%A4%A",
+    "parsed": null
+  },
+  {
+    "input": "hood lock",
+    "parsed": null
+  },
+  {
+    "input": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "parsed": null
+  }
+]
