@@ -4,6 +4,11 @@ All notable changes to this project are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and the project uses
 [Semantic Versioning](https://semver.org/).
 
+## Unreleased
+
+- Docs and examples pin the CDN copy at 0.1.2, the current release (they named 0.1.0, which draws the compact widget at 92 px where production uses 120).
+- Re-checked against production on 2026-10-09: the served script, frame reporter and widget contract are unchanged. No code change.
+
 ## 0.1.2 — 2026-10-03
 
 - The compact widget is first drawn 120 px tall, as production now draws it (it reports about 119 px; 92 made the host page shift when it loaded).

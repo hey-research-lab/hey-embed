@@ -7,7 +7,7 @@ comes from (`frame-src`). Frames always come from `https://heyresearch.xyz`.
 | ------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------- | ------------------------- |
 | Production's hosted script `https://heyresearch.xyz/embed/hey-project.js`                  | `https://heyresearch.xyz`                                                   | `https://heyresearch.xyz` |
 | This package, bundled into your own scripts (`import '@hey-research-lab/embed'`)           | nothing beyond your own (`'self'`)                                          | `https://heyresearch.xyz` |
-| This package from a CDN, pinned (`…/@hey-research-lab/embed@0.1.0/dist/hey-embed.iife.js`) | the CDN host, e.g. `https://cdn.jsdelivr.net` — with `integrity` on the tag | `https://heyresearch.xyz` |
+| This package from a CDN, pinned (`…/@hey-research-lab/embed@0.1.2/dist/hey-embed.iife.js`) | the CDN host, e.g. `https://cdn.jsdelivr.net` — with `integrity` on the tag | `https://heyresearch.xyz` |
 | This package, self-hosted copy of `dist/hey-embed.iife.js`                                 | `'self'`                                                                    | `https://heyresearch.xyz` |
 | A plain `<iframe>` (no script)                                                             | nothing                                                                     | `https://heyresearch.xyz` |
 
@@ -44,14 +44,14 @@ a Trusted Types sink.
 To pin, load a versioned copy of this package and add the hash of the exact file:
 
 ```sh
-curl -s https://cdn.jsdelivr.net/npm/@hey-research-lab/embed@0.1.0/dist/hey-embed.iife.js \
+curl -s https://cdn.jsdelivr.net/npm/@hey-research-lab/embed@0.1.2/dist/hey-embed.iife.js \
   | openssl dgst -sha384 -binary | openssl base64 -A
 ```
 
 ```js
 import { scriptTag } from '@hey-research-lab/embed';
 scriptTag({
-  scriptSrc: 'https://cdn.jsdelivr.net/npm/@hey-research-lab/embed@0.1.0/dist/hey-embed.iife.js',
+  scriptSrc: 'https://cdn.jsdelivr.net/npm/@hey-research-lab/embed@0.1.2/dist/hey-embed.iife.js',
   integrity: 'sha384-<hash>',
 });
 ```

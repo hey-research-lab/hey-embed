@@ -39,7 +39,7 @@ or, with no build step, one script tag (see [Hosted script or npm package](#host
 
 ```html
 <script type="module">
-  import 'https://cdn.jsdelivr.net/npm/@hey-research-lab/embed@0.1.0/dist/index.js';
+  import 'https://cdn.jsdelivr.net/npm/@hey-research-lab/embed@0.1.2/dist/index.js';
 </script>
 
 <hey-project project="hoodlock" variant="builder" theme="auto">
