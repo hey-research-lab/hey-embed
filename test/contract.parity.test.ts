@@ -45,7 +45,7 @@ function stamped(name: string): unknown {
 
 describe('parity with the recorded production contract (contract.json)', () => {
   it('records where it came from', () => {
-    expect(contract.source).toMatch(/^HEY Research Lab production embed contract at [0-9a-f]{40}$/);
+    expect(contract.source).toMatch(/^HEY Research Lab production embed contract, recorded \d{4}-\d{2}-\d{2}/);
   });
 
   it('has the same origin, element, paths and sandbox', () => {

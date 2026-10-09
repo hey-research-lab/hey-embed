@@ -30,8 +30,8 @@ Node 22 or newer for the tools (the published package supports Node 18+ and curr
 ## Parity with production
 
 The package's vocabulary, URL format, sandbox, resize message and snippets were extracted from
-HEY Research Lab's production contract at `21775391f6c0fb4494575e0b4463df535c65cb96`, and
-re-checked against production on 2026-10-09: the served `hey-project.js` and `frame.js` are
+HEY Research Lab's production contract on 2026-10-02 (production's source is private; this file and
+`test/fixtures/production/` are the public record of it), and re-checked against production on 2026-10-09: the served `hey-project.js` and `frame.js` are
 byte-identical to the fixtures, and the variants, themes, initial heights, sandbox, frame path and
 CSP are unchanged. (Production's widget frame now also sends `cache-control: … no-transform`; the
 package never sets that header.)
