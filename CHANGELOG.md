@@ -8,6 +8,7 @@ All notable changes to this project are documented here. The format follows
 
 - Docs and examples pin the CDN copy at 0.1.2, the current release (they named 0.1.0, which draws the compact widget at 92 px where production uses 120).
 - Re-checked against production on 2026-10-09: the served script, frame reporter and widget contract are unchanged. No code change.
+- Development: vitest 4.1.11 / tsup 8.5.1, with esbuild held at ^0.28.1 by a pnpm override; clears dev-only advisories in the test and build toolchain. No runtime change.
 
 ## 0.1.2 — 2026-10-03
 
