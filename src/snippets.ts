@@ -122,7 +122,7 @@ export function HeyProject() {
     const onMessage = (event) => {
       if (!frame.current || event.source !== frame.current.contentWindow) return;
       const data = event.data;
-      if (data && data.type === '${EMBED_HEIGHT_MESSAGE}' && typeof data.height === 'number') {
+      if (data && data.type === '${EMBED_HEIGHT_MESSAGE}' && typeof data.height === 'number' && Number.isFinite(data.height)) {
         setHeight(Math.min(Math.max(Math.ceil(data.height), ${EMBED_HEIGHT_RANGE.min}), ${EMBED_HEIGHT_RANGE.max}));
       }
     };

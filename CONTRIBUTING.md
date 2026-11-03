@@ -46,6 +46,10 @@ package never sets that header.)
 | `refs.json`, `parse.json` | production's answers for a table of refs, variants and themes                                           | a maintainer, from production's source |
 | `snippets.json`           | production's frame URL, HTML, iframe and React snippets for a table of targets                          | a maintainer, from production's source |
 
+One recorded difference, on purpose (2026-11-03): the React snippet in `snippets.json` checks
+`Number.isFinite(data.height)`, which production's configurator did not yet do. Regenerating the
+fixture before production takes that line will show it as the one failing snippet line.
+
 The tests hold the package to them:
 
 - `contract.parity.test.ts` — the constants equal `contract.json` and the values stamped into the

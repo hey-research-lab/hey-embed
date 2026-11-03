@@ -4,11 +4,15 @@ All notable changes to this project are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and the project uses
 [Semantic Versioning](https://semver.org/).
 
-## Unreleased
+## 0.1.3 — unreleased (not yet on npm)
 
+- `reactSnippet`: the generated component ignores a height message whose `height` is not a finite
+  number (`Number.isFinite`), as the element already does, so a frame posting `NaN` can no longer set
+  `height={NaN}`. This is a deliberate step ahead of production's configurator: `snippets.json` carries
+  the new line, and production's own React snippet takes the same change.
 - Docs and examples pin the CDN copy at 0.1.2, the current release (they named 0.1.0, which draws the compact widget at 92 px where production uses 120).
 - Re-checked against production on 2026-10-09: the served script, frame reporter and widget contract are unchanged. No code change.
-- Development: vitest 4.1.11 / tsup 8.5.1, with esbuild held at ^0.28.1 by a pnpm override; clears dev-only advisories in the test and build toolchain. No runtime change.
+- Development: vitest 4.1.12 / tsup 8.5.1, with esbuild held at ^0.28.1 by a pnpm override; clears dev-only advisories in the test and build toolchain. No runtime change.
 
 ## 0.1.2 — 2026-10-03
 
