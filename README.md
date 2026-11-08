@@ -4,9 +4,9 @@ A dependency-free `<hey-project>` Web Component, URL builder and attribute valid
 HEY Research Lab's builder evidence widgets — every widget is served by https://heyresearch.xyz.
 
 [![CI](https://github.com/hey-research-lab/hey-embed/actions/workflows/ci.yml/badge.svg)](https://github.com/hey-research-lab/hey-embed/actions/workflows/ci.yml)
-[![Licence: MIT](https://img.shields.io/badge/licence-MIT-blue.svg)](LICENSE)
-[![Node >=18](https://img.shields.io/badge/node-%3E%3D18-informational.svg)](package.json)
-[![Robinhood Chain 4663](https://img.shields.io/badge/Robinhood%20Chain-4663-informational.svg)](#why-robinhood-chain-only)
+[![Licence: MIT](assets/badges/licence-mit.svg)](LICENSE)
+[![Node >=18](assets/badges/node-18.svg)](package.json)
+[![Robinhood Chain 4663](assets/badges/robinhood-chain-4663.svg)](#why-robinhood-chain-only)
 
 ## Why it exists
 
