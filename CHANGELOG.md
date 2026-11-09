@@ -4,7 +4,7 @@ All notable changes to this project are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and the project uses
 [Semantic Versioning](https://semver.org/).
 
-## 0.1.3 — unreleased (not yet on npm)
+## 0.1.3 — 2026-11-03
 
 - `reactSnippet`: the generated component ignores a height message whose `height` is not a finite
   number (`Number.isFinite`), as the element already does, so a frame posting `NaN` can no longer set
