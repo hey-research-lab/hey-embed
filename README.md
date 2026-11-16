@@ -219,6 +219,8 @@ storage, makes no network request of its own (the iframe load is the only one, a
 heyresearch.xyz), escapes every value it writes into a snippet, and accepts a resize message only
 from its own frame.
 
+HEY Research Lab also reviews other projects' code and reports what it finds privately first: [security credits](https://github.com/hey-research-lab#security-credits).
+
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md): `pnpm install`, then `pnpm scan`, `pnpm lint`,
